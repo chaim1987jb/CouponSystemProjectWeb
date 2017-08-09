@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+ 
+     <link rel="stylesheet" href="./CssFiles/Customer.css" type="text/css" />
+    
+    
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+<style type="text/css"> 
+    .growImage {position: relative;width:80%; left:15px;top:15px}
+    .growDiv { left: 100px; top: 100px;width:150px;height:150px;position:relative }
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+</head>
+<body>
+
+   
+   <div class="media-right">
+		
+	
+      <popup success="all.success" err="all.error" info="all.info" alert-message="all.alertMessage()"></popup>
+     
+         
+		<h3 class="texstColor">All the coupons in the system</h3>
+		<select ng-model="test.type"
+		class="form-control" required>
+		      <option value="">Filter Coupons According To Type</option>
+              <option value="RESTURANS">RESTURANS</option>
+              <option value="ELECTRICITY">ELECTRICITY</option>	
+	          <option value="FOOD">FOOD</option>
+              <option value="HEALTH">HEALTH</option>
+              <option value="SPORTS">SPORTS</option>
+              <option value="CAMPING">CAMPING</option>
+              <option value="TRAVALLING">TRAVALLING</option>
+              <option value="OTHER">OTHER</option>
+          
+         </select>
+		 <input class="form-control" type="text" ng-model="test.title" placeholder="Filter Coupons According To Title">
+       <input class="form-control" type="text" ng-model="test.price" placeholder="Filter Coupons According To Price">   
+           
+	<div  ng-repeat="coupon in all.coupons | filter:test:match">
+	 <div class="dropdown effectfront ">
+		<a role="button"  >
+		   <img  width="304" height="236" data-ng-src={{coupon.image}} ng-click="all.getCouponData($index)">
+		      </a>
+	        	
+			   		          
+			          <div id={coupon.id} class="dropdown-content ">
+			          
+			          <ul >
+			         
+			               <li> Coupon Details:</li>
+			         
+			           
+			       
+			                 <li>Title: {{coupon.title}}</li>
+			         
+			                <li> Start date : {{coupon.startDate}}</li>
+			        
+			                <li>Expired Date : {{coupon.endDate}}</li>
+			       
+			                <li>Amount :{{coupon.amount}} </li>
+			             
+			                <li>Type :{{coupon.type}} </li>
+			                
+			                <li>Message : {{coupon.message}} </li>
+			           
+			                <li>Price : {{coupon.price}} </li>
+			          
+			                <li ><button class="btn btn-info" ng-click="all.purchase($index)">Purchase </button></li>
+			                 
+			            </ul>
+			            </div>
+			           <br>
+			         <br>
+			     </div>
+		     </div>        
+		  </div>
+			   
+			     <!--  
+		<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+	-->
+       
+		
+   
+</body>
+</html>

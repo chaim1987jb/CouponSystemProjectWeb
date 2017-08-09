@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="companyApp">
+<head>
+     <link href="bootstrap.css" rel="stylesheet" >
+    
+	<style type="text/css">
+     body{
+       background-color:#ffd297;
+         }
+         </style>
+          <link rel="stylesheet" href="./CssFiles/Menu.css" type="text/css" />
+          <link rel="stylesheet" href="./CssFiles/Information.css" type="text/css" />
+<meta charset="windows-1255">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="jQueryForDropdown.js"></script>
+  
+<script type="text/javascript" src="./angular.js"></script>
+<script src="./bootstrap.js"></script>
+<script src="./angular-ui-router.js"></script>
+<script src="./CompanyServices/RouteForCompany.js"></script>	
+		<script src="./CompanyServices/CompanyServicesAPI.js"></script>
+	    <script src="./CompanyControllers/GetCouponByType.js"></script>
+	    <script src="./CompanyControllers/CouponByID.js"></script>
+		<script src="./CompanyControllers/GetCponCtrl.js"></script>
+		<script src="./CompanyControllers/CreateCouponCtrl.js"></script>
+        <script src="./CompanyControllers/GetCompanyNameCtrl.js"></script>
+        <script src="./CompanyControllers/GetCompanyDetailsCtrl.js"></script>
+        <script src="./CompanyControllers/GetCouponsByEndDateCtrl.js"></script>
+         <script src="./CompanyControllers/Popup.js"></script>
+         <script src="./CompanyControllers/Modal.js"></script>
+         <script src="./CompanyControllers/Logout.js"></script>
+<title>Company</title>
+
+  </head>
+  <body>
+   <div ng-controller="GetNameCtrl as ctrl">
+
+  <h1 style="text-align:center" class="texstColorH1"> Hello {{ctrl.name}} </h1>
+  
+  </div>
+    <h1 style="text-align:center" class="texstColorH1">Welcome To Coupon Site
+       </h1>
+     <br>
+	<br>
+       <div ng-controller="RouteCtor as r"></div>
+  
+        <div  ng-include="'CompanyHtmlFiles/CompanyMenu.html'"></div>
+     
+          <div class="ui" ui-view></div>
+          
+         
+</body>
+</html>

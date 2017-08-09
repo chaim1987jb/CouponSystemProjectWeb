@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+
+     
+      	<div>
+      	   <modal remove="ctrl.removeCompany" confirm="ctrl.confirm()" alert-message="ctrl.alertMessage()"></modal>
+      <popup success="ctrl.success" err="ctrl.error" info="ctrl.info" alert-message="ctrl.alertMessage()"></popup>
+     
+      	<h3 class="texstColor">Create Customer:</h3>
+      	<form ng-submit="ctrl.createCusrtomer()">
+		 <strong>customer name:</strong> 
+	     <input class="form-control" type="text" required pattern="[^'\x22]+" 
+	     placeholder="Enter Name"  ng-model="ctrl.customer.custName"/>
+		 <strong>customer password:</strong> 
+		 <input class="form-control" type="text"  required pattern="[^'\x22]{4,}" 
+		 placeholder="Enter Password" ng-model="ctrl.customer.password"/>
+		 
+		 <button type="submit" class="btn btn-success">Save</button>
+		 </form>
+	</div>
+      
+        
+         
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="customerApp">
+
+<head>
+<meta charset="windows-1255">
+     <link rel="stylesheet" href="./CssFiles/Menu.css" type="text/css" />
+     <link rel="stylesheet" href="./CssFiles/Information.css" type="text/css" />
+     <link rel="stylesheet" href="./CssFiles/Customer.css" type="text/css" />
+   <link href="bootstrap.css" rel="stylesheet" >
+   <script type="text/javascript" src="./angular.js"></script>
+   <script src="./bootstrapForCustomer.js"></script>
+   <script src="./angular-route.js"></script>
+      <script src="./angular-ui-router.js"></script>
+      <script src="./CustomerServices/RoutForCustomer.js"></script>
+      <script src="./CustomerServices/CustomerServicesAPI.js"></script>
+      <script src="./CustomerControllers/AllTheCouponsInTheSystem.js"></script>
+      <script src="./CustomerControllers/MyPurchaseCoupons.js"></script>
+      <script src="./CustomerControllers/GetPurchasedCouponsByPrice.js"></script>
+      <script src="./CustomerControllers/GetPurchasedCouponsByType.js"></script>
+            <script src="./CustomerControllers/CustomerNameCtrl.js"></script>
+            <script src="./CustomerControllers/Popup.js"></script>
+             <script src="./CustomerControllers/Logout.js"></script>
+      
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+<title>Customer</title>
+<body class="colr">
+    <div ng-controller="RouteCtor as r"></div>
+     
+          <div ng-controller="CustomerNameCtrl as ctrl">
+   
+  <h1 style="text-align:center" class="texstColorH1"> Hello {{ctrl.name}} </h1>
+  
+  </div >
+      <h1 class="zindex texstColorH1" style="text-align:center" >Welcome To CouponSite
+        </h1>
+        
+             
+           
+        
+      <div  ng-include="'CustomerHtmlFiles/CustomerMenu.html'"></div>
+       
+          <div class="ui" ui-view></div>    
+   
+   
+    
+  
+</body></html>

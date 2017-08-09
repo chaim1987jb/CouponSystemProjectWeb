@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="bootstrap.css" rel="stylesheet" >
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+    
+         <div class="media-right">
+         
+		<div  ng-controller="CreateCouponCtrl as c">
+		
+		
+		 <popup success="c.success" err="c.error" info="c.info" alert-message="c.alertMessage()"></popup>
+		 
+		<h3 class="texstColor">Create Coupon :</h3>
+		<form class="form-horizontal" ng-submit="c.create()">
+		
+		<div class="form-group" >
+		<label for="name" >Title:</label >
+		
+		<input type="text" class="form-control" placeholder="Enter title"
+		ng-model="c.couponToSend.title" required pattern="[^'\x22]+" spellcheck="true"
+		maxlength="60" >
+		</div>
+		<div class="form-group" >
+		<label for="name" >Start Date:</label >
+
+		<input id="startDate" type="date" min="2017-06-21"  class="form-control" ng-model="c.couponToSend.startDate" required >
+		</div>
+		<div class="form-group" >
+		<label for="name" >Expired Date:</label >
+
+		<input id="endDate" type="date" min="2017-06-21"  class="form-control" ng-model="c.couponToSend.endDate" required />
+		</div>
+		<div class="form-group" >
+		<label for="name" >Amount:</label >
+		<input type="number" min="1" max="10000" placeholder="Enter Amount" class="form-control" ng-model="c.couponToSend.amount" required/>
+		</div>
+		<div class="form-group" >
+		<label for="name" >Select Type:</label >
+
+		<select ng-model="c.couponToSend.type" 
+		class="form-control" required>
+		      <option value="">Please select a type For your new coupon</option>
+              <option value="RESTURANS">RESTURANS</option>
+              <option value="ELECTRICITY">ELECTRICITY</option>	
+	          <option value="FOOD">FOOD</option>
+              <option value="HEALTH">HEALTH</option>
+              <option value="SPORTS">SPORTS</option>
+              <option value="CAMPING">CAMPING</option>
+              <option value="TRAVALLING">TRAVALLING</option>
+              <option value="OTHER">OTHER</option>
+          
+         </select>
+		</div>
+		<div class="form-group" >
+		<label for="name" >Price:</label >
+
+		<input type="number" step="0.01" min="0.5" placeholder="Enter Price" class="form-control"
+		 ng-model="c.couponToSend.price" required/>
+		 </div>
+		 <div class="form-group" >
+		 <label for="name" >Image:</label >
+		<input id="inputFileToLoad" type="file" on-change="img" class="form-control" ng-model="c.couponToSend.image" required/>
+		</div>
+		<div class="form-group" >
+		<label for="" >Message:</label >
+		
+		<input type="text" pattern="[^'\x22]+" maxlength="180" placeholder="Enter Message" class="form-control" ng-model="c.couponToSend.message" required/>
+		</div>
+		<button class="btn btn-success" type="submit">Save</button>
+		
+		</form>
+		
+	
+       </div>
+       </div>
+</body>
+</html>

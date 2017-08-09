@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./CssFiles/Customer.css" type="text/css" />
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+
+   	<div ng-controller="GetCponByTypeCtrl as g">
+   	
+    <modal remove="g.removeCoupon" confirm="g.confirm()" alert-message="g.alertMessage()"></modal>
+      <popup success="g.success" err="g.error" info="g.info" alert-message="g.alertMessage()"></popup>
+ 
+   	
+   	<h3 class="texstColor"> Get Coupon By Type:</h3>
+   	<form  ng-submit="g.getCouponByType()" >
+		<select class="form-control" ng-model="g.type"  required>
+             <option value="">Please select a type to filter the coupons</option>
+              <option value="RESTURANS">RESTURANS</option>
+              <option value="ELECTRICITY">ELECTRICITY</option>	
+	          <option value="FOOD">FOOD</option>
+              <option value="HEALTH">HEALTH</option>
+              <option value="SPORTS">SPORTS</option>
+              <option value="CAMPING">CAMPING</option>
+              <option value="TRAVALLING">TRAVALLING</option>
+              <option value="OTHER">OTHER</option>  
+         </select>
+         <br>
+         <button type="submit" class="btn btn-success">Search</button>
+         </form>
+         <br>
+         <br>
+
+   <div ng-repeat="coupon in g.coupons">
+	 <div class="dropdown effectfront ">
+		<a role="button"  >
+		   <img  width="304" height="236" data-ng-src={{coupon.image}} ng-click="all.getCouponData($index)">
+		      </a>
+	        	
+			   		          
+			          <div id={coupon.id} class="dropdown-content ">
+			          
+			          <form ng-submit="g.updateCoupon($index)">
+			               <div>
+			               <span> Coupon Details:</span>
+			              </div>
+			              <div>
+			                 <span>ID: {{coupon.id}}</span>
+			                   </div>
+			                     <div>
+			                 <span>Title: {{coupon.title}}</span>
+			                       </div>
+			                       <div>
+			                <span> Start date : {{coupon.startDate | date}}</span>
+			                  </div>
+			                 <div>
+			                <span> 
+			                  Expired Date :           
+			                 <span ng-hide="g.updateMode">{{coupon.endDate | date}}</span>
+			                 <input type="date" class="form-control" ng-show="g.updateMode"
+			                 ng-model="coupon.endDate" required="required"></span>
+			                   </div>
+			              <div>
+			                <span>Amount :{{coupon.amount}} </span>
+			               </div>
+			              <div>
+			                <span>Type :{{coupon.type}} </span>
+			                  </div>
+			              <div>
+			                <span>Message : {{coupon.message}} </span>
+			             </div>
+			              <div>
+			                <span>Price :  
+			                <span ng-hide="g.updateMode">{{coupon.price}}</span>
+			                <input type="text" class="form-control" ng-show="g.updateMode"
+			                ng-model="coupon.price" required="required"></span>
+			                 </div>
+			              <div>
+			               <span>              
+      				  <button type="button" class="btn btn-primary" ng-hide="g.updateMode" ng-click="g.toggleUpdateMode()">Update</button>
+			          <button type="submit" class="btn btn-success" ng-show="g.updateMode" >Save</button>
+			          <button type="button" class="btn btn-primary" ng-show="g.updateMode" ng-click="g.toggleUpdateMode()">Back</button> 
+			          <button type="button" class="btn btn-danger" ng-hide="g.updateMode" ng-click="g.deleteCouponFunc($index)">Delete</button> 
+      
+    
+                         </span>
+                           </div>
+			              
+			               </form>  
+			           
+			            </div>
+			           <br>
+			         <br>
+			         <br>
+			     </div>
+			     <br>
+		     </div>    
+                 <br>
+			     <br>          
+     
+			    
+		</div>
+</body>
+</html>

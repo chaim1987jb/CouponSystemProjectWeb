@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./CssFiles/Customer.css" type="text/css" />
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+ 
+ 
+        
+            <modal remove="ctrl.removeCustomer" confirm="ctrl.confirm()" alert-message="ctrl.alertMessage()"></modal>
+      <popup success="ctrl.success" err="ctrl.error" info="ctrl.info" alert-message="ctrl.alertMessage()"></popup>
+     
+        <h3 class="texstColor">All The Customers</h3>    
+   <input class="form-control" type="text" ng-model="test.custName" placeholder="Filter Customers According To Name">
+       <input class="form-control" type="text" ng-model="test.id" placeholder="Filter Customers According To ID"> 
+          <div class="container col-md-12" ng-repeat="customer in ctrl.custData | filter:test:match">
+    
+   
+       <a role="button" class=" list-group-item list-group-item-warning"
+         data-toggle="collapse" data-target="#{{customer.id}}">
+         {{customer.custName}}</a>
+
+	    
+		
+			 		          
+			         
+			         <div id={{customer.id}} class="panel-collapse collapse">
+			         <div class="panel-body color">
+			         <form ng-submit="ctrl.updateCustomer($index)">
+			            <div>
+			                 <H3> Customer Details: </H3>
+			            </div>
+			                 <div>
+			                  <span>ID : </span>
+			                <span>{{customer.id}}</span> 
+			             
+			              </div>
+			                 <div>
+			                  <span>Customer Name : </span>
+			                <span >{{customer.custName}}</span>
+			           
+			                </div>
+			                
+			                <div>
+			                  <span >Customer Password : </span>
+			                <span ng-hide="ctrl.updateMode">{{customer.password}}</span>
+			                <input class="form-control" required pattern="[^'\x22]{4,}" required type="text" 
+			                ng-show="ctrl.updateMode" ng-model="customer.password">
+			                </div>
+			            <div>
+			          <button type="button" class="btn btn-info" ng-hide="ctrl.updateMode" ng-click="ctrl.toggleUpdateMode()">Update</button>
+			          <button type="submit" class="btn btn-success" ng-show="ctrl.updateMode" >Save</button>
+			          <button type="button" class="btn btn-info" ng-show="ctrl.updateMode" ng-click="ctrl.toggleUpdateMode()">Back</button> 
+			          <button type="button" class="btn btn-danger" ng-hide="ctrl.updateMode" ng-click="ctrl.deleteCustomer($index)">Delete</button> 
+			          <br>       
+			            
+			          </div>
+			          </form>
+			         
+		 <a role="button" class=" list-group-item list-group-item-info"
+         data-toggle="collapse" data-target="#coupons{{customer.id}}">
+         Coupons</a>
+	 		          
+			          
+			         <div id="coupons{{customer.id}}" class="collapse">
+		
+	<div ng-repeat="coupon in customer.coupons">
+	 <div class="dropdown effectfront ">
+		<a role="button"  >
+		   <img  width="304" height="236" data-ng-src={{coupon.image}} ng-click="all.getCouponData($index)">
+		      </a>
+	        	
+			   		          
+			          <div id={coupon.id} class="dropdown-content ">
+			          
+			          <ul >
+			         
+			               <li> Coupon Details:</li>
+			         
+			           
+			       
+			                 <li>Title: {{coupon.title}}</li>
+			         
+			                <li> Start date : {{coupon.startDate}}</li>
+			        
+			                <li>Expired Date : {{coupon.endDate}}</li>
+			       
+			                <li>Amount :{{coupon.amount}} </li>
+			             
+			                <li>Type :{{coupon.type}} </li>
+			                
+			                <li>Message : {{coupon.message}} </li>
+			           
+			                <li>Price : {{coupon.price}} </li>
+			          
+			               
+			                 
+			            </ul>
+			            </div>
+			           <br>
+			         <br>
+			     </div>
+		     </div>        
+		  </div>
+			  
+		        </div>
+			          
+		</div>
+    </div>
+          
+
+</body>
+</html>

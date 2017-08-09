@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+   <div class="area"></div><nav class="main-menu">
+       <ul >
+       <li>
+       
+           <a href="#/main">
+              <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                      Main Menu
+                           </span></a>
+                              </li>
+      <li class="has-subnav">
+         	 <a ui-sref="allthecoupons">
+                  <i class="fa fa-shopping-cart
+ fa-2x"></i>
+                         <span class="nav-text">
+                               All The Coupons In Coupons In The System
+                                 </span> </a>
+   								   </li>
+      <li class="has-subnav">     
+              <a ui-sref="mypurchasecoupons">
+                   <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">My Coupons
+                            </span></a>
+    						    </li>
+       <li class="has-subnav">
+     		  <a ui-sref="getPurchasedCouponsByPrice">
+         		   <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">My Coupons Filtered By Price
+                  	         </span></a>
+          						  </li>
+       <li class="has-subnav">
+    		  <a ui-sref="getPurchasedCouponsByType">
+    			    <i class="fa fa-bar-chart-o fa-2x"></i>
+                         <span class="nav-text">My Coupons Filtered By Type
+              		           </span></a>
+      					        	</li>
+      					        	 <li>
+                    <a ui-sref="Information">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Information
+                        </span>
+                    </a>
+                </li>
+      <li class="has-subnav" ng-controller="Logout as l">
+             <a ng-click="l.logoutFunc()" href="http://localhost:8080/CouponSystemProjectWeb/login.html">
+                   <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">Log out
+                        </span></a>
+                            </li>
+                </ul>
+          </nav>
+     
+      
+
+</body>
+</html>

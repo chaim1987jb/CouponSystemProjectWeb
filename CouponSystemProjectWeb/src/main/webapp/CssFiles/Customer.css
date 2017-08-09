@@ -1,0 +1,118 @@
+@CHARSET "ISO-8859-1";
+
+
+.zindex{
+	
+	z-index: 1000000000000000;
+}
+.colr{
+	 background-color:#ffd297;
+	
+}
+.color{
+	 background-color:#b4e3b3;
+	
+}
+.d:focus {
+    background-color:#c74438;
+}
+img{
+	z-index: 100;
+}
+
+@-webkit-keyframes fadi {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes fadi {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+.dropdown {
+      
+     transition: all 500ms ease;
+      -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+     animation: fadeout 1s;
+  -webkit-font-smoothing:antialiased;
+     -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+  
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100000000000000000000;
+}
+
+.dropdown:hover .dropdown-content {
+  animation: fadein 1s; 
+
+     -webkit-font-smoothing:antialiased;
+	  -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+ 
+    display: block;
+}
+.desc {
+  
+  -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+      transition: all 500ms ease;
+     transition-delay: 1s;
+     transition-duration: 1s;
+    padding: 15px;
+    text-align: center;
+}
+
+.fadein{
+	animation: fadein 1s;
+}
+ @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.effectfront {
+  border: none;
+  margin: 0 auto;
+}
+.effectfront:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.round {
+	  width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+     border-radius: 8px;
+    outline: none;
+  
+}
+
+

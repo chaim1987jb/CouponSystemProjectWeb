@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+
+       
+    <popup success="my.success" err="my.error" info="my.info" alert-message="my.alertMessage()"></popup>
+		
+		<h3 class="texstColor">My Coupons</h3>
+	<div ng-repeat="coupon in my.coupons">
+	 <div class="dropdown effectfront ">
+		<a role="button"  >
+		   <img  width="304" height="236" data-ng-src={{coupon.image}} ng-click="all.getCouponData($index)">
+		      </a>
+	        	
+			   		          
+			          <div id={coupon.id} class="dropdown-content ">
+			          
+			          <ul >
+			         
+			               <li> Coupon Details:</li>
+			         
+			           
+			       
+			                 <li>Title: {{coupon.title}}</li>
+			         
+			                <li> Start date : {{coupon.startDate}}</li>
+			        
+			                <li>Expired Date : {{coupon.endDate}}</li>
+			       
+			                <li>Amount :{{coupon.amount}} </li>
+			             
+			                <li>Type :{{coupon.type}} </li>
+			                
+			                <li>Message : {{coupon.message}} </li>
+			           
+			                <li>Price : {{coupon.price}} </li>
+			          
+			              
+			                 
+			            </ul>
+			            </div>
+			           <br>
+			         <br>
+			     </div>
+		     </div>     
+     </div>  
+  </div>
+  
+</body>
+</html>

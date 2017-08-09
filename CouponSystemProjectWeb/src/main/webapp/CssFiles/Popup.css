@@ -1,0 +1,92 @@
+@CHARSET "ISO-8859-1";
+
+
+/* Popup container - can be anything you want */
+.popup {
+   display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+  
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+ .popupSucssess {
+     overflow: auto; 
+    width: 360px;
+    background-color: #6cff3c;
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    z-index: 1;
+     left: 10;
+    top: 5;
+    margin-left: -80px;
+}
+.popupError {
+   
+     overflow: auto; 
+    width: 360px;
+    background-color: #ed474b;
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    z-index: 1;
+     left: 10;
+    top: 5;
+    margin-left: -80px;
+}
+.popupInfo {
+   
+     overflow: auto; 
+    width: 360px;
+    background-color: #17fffa;
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    z-index: 1;
+    left: 10;
+    top: 5;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup 
+.popup .show {
+    visibility: visible; 
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+  */
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}

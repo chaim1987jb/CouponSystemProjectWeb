@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="adminApp">
+	<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <link rel="stylesheet" href="./CssFiles/Menu.css" type="text/css" />
+	  <link rel="stylesheet" href="./CssFiles/Information.css" type="text/css" />
+	<style type="text/css">
+     body{
+       background-color:#ffd297;
+         }
+         </style>
+		<meta charset="windows-1255">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="./angular.js"></script>
+	 <script src="./angular-ui-router.js"></script>
+    <script src="./bootsrapForAdmin.js"></script>
+    <script src="./AdminServices/RouterForAdmin.js"></script>
+    <script src="./AdminServices/AdminServicesAPI.js"></script>
+    <script src="./AdminControllers/CreateCompanyCtrl.js"></script>
+     <script src="./AdminControllers/CreateCustomerCtrl.js"></script>
+     <script src="./AdminControllers/AllTheCompanies.js"></script>
+     <script src="./AdminControllers/AllTheCustomers.js"></script>
+     <script src="./AdminControllers/GetCustomerByIDCtrl.js"></script>
+     <script src="./AdminControllers/GetCompanyByIDCtrl.js"></script>
+      <script src="./AdminControllers/Popup.js"></script>
+      <script src="./AdminControllers/Modal.js"></script>
+      <script src="./AdminControllers/Logout.js"></script>
+     
+     
+    
+		
+		<title>Admin</title>
+	</head>
+
+<body>
+<h1 style="text-align:center" class="texstColorH1">Hello Admin</h1>
+<hr align="left">
+<br>
+<br>
+           <div ng-controller="RouteCtor as r"></div>
+       
+       <div  ng-include="'AdminHtmlFiles/AdminMenu.html'"></div>
+     
+          <div class="ui" ui-view></div>
+          
+	
+
+</body>
+</html>

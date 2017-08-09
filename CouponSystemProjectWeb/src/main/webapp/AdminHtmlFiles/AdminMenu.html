@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="./CssFiles/Menu.css" type="text/css" />
+<title>Insert title here</title>
+</head>
+ <body><div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a role="button" ui-sref="main">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Main Menu
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a role="button" ui-sref="AllTheCompanies">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                           Get All The Companies In The System
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                     <a role="button" ui-sref="AllTheCustomers">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                           Get All The Customers In The System
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                   <a role="button" ui-sref="CreateCompany">
+                       <i class="fa fa-folder-open fa-2x"></i>
+                        <span class="nav-text">
+                         Create Company
+                        </span>
+                    </a>
+                   
+                </li>
+                <li>
+                    <a role="button" ui-sref="CreateCustomer">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                           Create Customer
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a role="button" ui-sref="GetCustomerByID">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                            Get Customer By ID
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a role="button" ui-sref="GetCompanyByID">
+                       <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">
+                            Get Company By ID
+                        </span>
+                    </a>
+                </li>
+                 <li>
+                    <a role="button" ui-sref="Information">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                           Information
+                        </span>
+                    </a>
+                </li>
+               
+                <li>
+                   <a ng-controller="Logout as l" ng-click="l.logoutFunc()"
+                    href="http://localhost:8080/CouponSystemProjectWeb/login.html">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+  </body>
+</html>

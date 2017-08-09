@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body >
+
+     <div ng-controller="AllTheCouponsCtrl as all">
+     
+     <ul class="menu" ng-repeat="coupon in all.coupons">
+		
+		
+		
+	<li >
+		<a href="#s1">
+		   <img  width="304" height="236" data-ng-src={{coupon.image}} ng-click="all.getCouponData($index)">
+		      </a>
+	        	
+			   		          
+			          
+			          <ul class="submenu">
+			         
+			               <li> Coupon Details:</li>
+			         
+			           
+			       
+			                <li>Title : </li>
+			                <li>{{all.couponData.title}}</li>
+			         
+			                <li>Start date : </li>
+			                <li>{{all.couponData.startDate}}</li>
+			        
+			                <li>Expired Date : </li>
+			                <li>{{all.couponData.endDate}}</li>
+			         
+			                <li>Amount : </li>
+			                <li>{{all.couponData.amount}}</li>
+			        
+			                <li>Type : </li>
+			                <li>{{all.couponData.type}}</li>
+			        
+			               <li>Massage :</li>
+			               <li>{{all.couponData.massage}}</li>
+			       
+			                <li>Price : </li>
+			                <li>{{all.couponData.price}}</li>
+			                <li ><button ng-click="all.purchase()">Purchase </button></li>
+			                 
+			            </ul>
+			        </li>        
+			     </ul>
+             </div>
+
+</body>
+</html>

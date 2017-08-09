@@ -1,0 +1,67 @@
+@CHARSET "ISO-8859-1";
+
+h1.css{
+     color: #444ba4;
+     text-shadow: 2px 2px 4px #000000;
+     text-align: center;
+     
+      font-size: 700%;
+     font-weight: 700;
+    
+    
+}
+.texstColor{
+	
+	 color: #444ba4;
+	  font-size: 200%;
+      text-shadow: 2px 2px 4px #696969;
+      font-weight: 700;
+    
+}
+.containerimg {
+  max-height: 50%;
+  max-width: 90%;
+}
+.colr{
+	  background-color:#ffd297;
+	
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.divv {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}

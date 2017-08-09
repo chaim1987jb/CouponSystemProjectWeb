@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+.texstColor{
+	
+	 color: #4d31e8;
+     text-shadow: 2px 2px 4px #696969;
+     font-weight: 700;
+     
+}
+.texstColorH1{
+	
+	 color: #4d31e8;
+     text-shadow: 2px 2px 4px #696969;
+     font-weight: 700;
+     font-size: 400%;
+}
+.divColor{
+	
+	background: #b4e3b3;
+	
+}

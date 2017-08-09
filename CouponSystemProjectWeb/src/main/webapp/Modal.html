@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+ <link rel="stylesheet" href="./CssFiles/Modal.css" type="text/css" />
+<head>
+  
+</head>
+<body>
+
+
+
+
+<!-- The Modal  -->
+<div id="myModal" class="modal" ng-if="remove">
+   
+  <!-- Modal content -->
+ 
+  <div id="divi" class="modal-content colr" ng-if="remove">
+    <span class="close" ng-click="alertMessage()">&times;</span>
+      <strong>Warning! </strong> <p>{{remove}}</p>
+     <button ng-click="confirm()">Confirm</button>
+            <button ng-click="alertMessage()">Cancel</button>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

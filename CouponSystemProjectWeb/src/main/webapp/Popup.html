@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>			
+<head>
+ <link rel="stylesheet" href="./CssFiles/Popup.css" type="text/css" />
+</head>
+<body style="text-align:center">
+
+
+
+<div class="popup " ng-if="success" ng-click="alertMessage()">
+  <span class="popupSucssess" id="myPopup">{{success}}</span>
+</div>
+
+<div class="popup " ng-if="info" ng-click="alertMessage()">
+  <span class=popupInfo id="myPopup">{{info}}</span>
+
+</div>
+<div class="popup " ng-if="err" ng-click="alertMessage()" >
+  <span class="popupError" id="myPopup">{{err}}</span>
+   
+</div>
+
+
+
+
+</body>
+</html>

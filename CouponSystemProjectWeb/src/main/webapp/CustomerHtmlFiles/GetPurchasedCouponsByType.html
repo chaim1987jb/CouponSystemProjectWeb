@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+
+    <div class="media-right">
+   	
+<label for="nav-trigger"></label>
+    <popup success="get.success" err="get.error" info="get.info" alert-message="get.alertMessage()"></popup>
+<div class="site-wrap">
+   	<h3 class="texstColor"> Get Coupon By Type:</h3>
+   	<form ng-submit="get.getCouponByType()">
+		<select ng-model="get.type" 
+		class="form-control" required>
+		      <option value="">Please select a type For your new coupon</option>
+              <option value="RESTURANS">RESTURANS</option>
+              <option value="ELECTRICITY">ELECTRICITY</option>	
+	          <option value="FOOD">FOOD</option>
+              <option value="HEALTH">HEALTH</option>
+              <option value="SPORTS">SPORTS</option>
+              <option value="CAMPING">CAMPING</option>
+              <option value="TRAVALLING">TRAVALLING</option>
+              <option value="OTHER">OTHER</option>
+          
+         </select>
+         <br>
+         <button type="submit" >Search</button>
+         </form>
+         <br>
+
+		
+	<div ng-repeat="coupon in get.coupons">
+	 <div class="dropdown effectfront ">
+		<a role="button"  >
+		   <img  width="304" height="236" data-ng-src={{coupon.image}} ng-click="all.getCouponData($index)">
+		      </a>
+	        	
+			   		          
+			          <div id={coupon.id} class="dropdown-content ">
+			          
+			          <ul >
+			         
+			               <li> Coupon Details:</li>
+			         
+			           
+			       
+			                 <li>Title: {{coupon.title}}</li>
+			         
+			                <li> Start date : {{coupon.startDate}}</li>
+			        
+			                <li>Expired Date : {{coupon.endDate}}</li>
+			       
+			                <li>Amount :{{coupon.amount}} </li>
+			             
+			                <li>Type :{{coupon.type}} </li>
+			                
+			                <li>Message : {{coupon.message}} </li>
+			           
+			                <li>Price : {{coupon.price}} </li>
+			          
+			              
+			                 
+			            </ul>
+			            </div>  
+			            <br><br>  
+		          </div>
+		          <br>
+          </div>
+   </div>
+		
+    </div>
+
+</body>
+</html>

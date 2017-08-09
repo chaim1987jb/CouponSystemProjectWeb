@@ -1,0 +1,102 @@
+<!DOCTYPE html >
+<html>
+
+
+<head>
+<meta charset="windows-1255">
+ <link rel="stylesheet" href="./CssFiles/Customer.css" type="text/css" />
+ 
+</head>
+<body>
+
+
+ 
+
+
+
+  
+   	<div ng-controller="GetCponCtrl as g">
+   
+   <div class="col-md-6">
+  
+      
+      <modal remove="g.removeCoupon" confirm="g.confirm()" alert-message="g.alertMessage()"></modal>
+      <popup success="g.success" err="g.error" info="g.info" alert-message="g.alertMessage()"></popup>
+       
+       <h3 class="texstColor">My Cpoupons :</h3>
+        <div ng-repeat="coupon in g.arr">
+	 <div class="dropdown effectfront ">
+		<a role="button"  >
+		   <img  width="304" height="236" data-ng-src={{coupon.image}} ng-click="all.getCouponData($index)">
+		      </a>
+	        	
+			   		          
+			            <div id={coupon.id} class="dropdown-content ">
+			          
+			          <form ng-submit="g.updateCoupon($index)">
+			               <div>
+			               <span> Coupon Details:</span>
+			              </div>
+			              <div>
+			                 <span>ID: {{coupon.id}}</span>
+			                   </div>
+			                     <div>
+			                 <span>Title: {{coupon.title}}</span>
+			                       </div>
+			                       <div>
+			                <span> Start date : {{coupon.startDate | date}}</span>
+			                  </div>
+			                 <div>
+			                <span> 
+			                  Expired Date :           
+			                 <span ng-hide="g.updateMode">{{coupon.endDate | date}}</span>
+			                 <input type="date" class="form-control" ng-show="g.updateMode"
+			                 ng-model="coupon.endDate" required="required"></span>
+			                   </div>
+			              <div>
+			                <span>Amount :{{coupon.amount}} </span>
+			               </div>
+			              <div>
+			                <span>Type :{{coupon.type}} </span>
+			                  </div>
+			              <div>
+			                <span>Message : {{coupon.message}} </span>
+			             </div>
+			              <div>
+			                <span>Price :  
+			                <span ng-hide="g.updateMode">{{coupon.price}}</span>
+			                <input type="text" class="form-control" ng-show="g.updateMode"
+			                ng-model="coupon.price" required="required"></span>
+			                 </div>
+			              <div>
+			               <span>              
+      				  <button type="button" class="btn btn-primary" ng-hide="g.updateMode" ng-click="g.toggleUpdateMode()">Update</button>
+			          <button type="submit" class="btn btn-success" ng-show="g.updateMode" >Save</button>
+			          <button type="button" class="btn btn-primary" ng-show="g.updateMode" ng-click="g.toggleUpdateMode()">Back</button> 
+			          <button type="button" class="btn btn-danger" ng-hide="g.updateMode" ng-click="g.deleteCouponFunc($index)">Delete</button> 
+      
+    
+                         </span>
+                           </div>
+			              
+			               </form>  
+			           
+			            </div>
+			            <br>
+			           <br>
+			         <br>
+			     </div>
+			     <br>
+		     </div>    
+                 <br>
+			        <br>       
+     
+			
+          </div>
+
+      </div>
+ 
+
+	
+</body>
+</html>

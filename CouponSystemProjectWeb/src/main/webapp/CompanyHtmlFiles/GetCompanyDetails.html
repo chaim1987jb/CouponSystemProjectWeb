@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+     
+            <div class="divColor" ng-controller="GetCompanyDetailsCtrl as ctrl">
+                 <h3 class="texstColor"> Company Details : </h3>
+                 
+                        <div>
+			                <strong>ID : </strong>
+			                <strong >{{ctrl.company.id}}</strong>
+			                </div>
+			                <div>
+			                <strong>Name : </strong>
+			                <strong >{{ctrl.company.compName}}</strong>
+			                </div>
+			                    <div>
+			                  <strong > Email : </strong>
+			                <strong >{{ctrl.company.email}}</strong>
+			               </div>
+			                <div>
+			                  <strong> Password : </strong>
+			                <strong>{{ctrl.company.password}}</strong>
+			                
+			                </div>
+           
+             </div>
+</body>
+</html>

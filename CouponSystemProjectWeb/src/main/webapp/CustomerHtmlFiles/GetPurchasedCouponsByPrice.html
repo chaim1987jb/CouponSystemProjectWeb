@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<title>Insert title here</title>
+</head>
+<body>
+    
+    
+    
+             <popup success="get.success" err="get.error" info="get.info" alert-message="get.alertMessage()"></popup>
+        <h3 class="texstColor">Get Coupon By Price:</h3>
+        <form  ng-submit="get.getCouponByPrice()">
+       
+        <input class="form-control" type="number" min=0.5 step="0.1" ng-model="get.price" required >
+         <button type="submit">Search</button>
+                 </form>
+                 <br><br>
+	<div ng-repeat="coupon in get.coupons">
+	 <div class="dropdown effectfront ">
+		<a role="button"  >
+		   <img  width="304" height="236" data-ng-src={{coupon.image}} ng-click="all.getCouponData($index)">
+		      </a>
+	        	
+			   		          
+			          <div id={coupon.id} class="dropdown-content ">
+			          
+			          <ul >
+			         
+			               <li> Coupon Details:</li>
+			         
+			           
+			       
+			                 <li>Title: {{coupon.title}}</li>
+			         
+			                <li> Start date : {{coupon.startDate}}</li>
+			        
+			                <li>Expired Date : {{coupon.endDate}}</li>
+			       
+			                <li>Amount :{{coupon.amount}} </li>
+			             
+			                <li>Type :{{coupon.type}} </li>
+			                
+			                <li>Message : {{coupon.message}} </li>
+			           
+			                <li>Price : {{coupon.price}} </li>
+			          
+			              
+			                 
+			            </ul>
+			            </div>    
+		            </div>
+		          <br><br><br>
+          </div>
+         <br>
+   
+     
+</body>
+</html>

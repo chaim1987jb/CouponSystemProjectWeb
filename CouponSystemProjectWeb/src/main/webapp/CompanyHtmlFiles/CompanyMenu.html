@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+            <div class="area"></div><nav class="main-menu">
+       <ul >
+       <li>
+       
+           <a role="button" ui-sref="/">
+              <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                      Main Menu
+                           </span></a>
+                              </li>
+      <li class="has-subnav">
+         	 <a role="button" ui-sref="CreateCoupon">
+                  <i class="fa  fa-list
+ fa-2x"></i>
+                         <span class="nav-text">
+                               Create New Coupon
+                                 </span> </a>
+   								   </li>
+      <li class="has-subnav">     
+              <a role="button" ui-sref="myCoupons">
+                   <i class="fa fa-shopping-cart fa-2x"></i>
+                        <span class="nav-text">My Coupons
+                            </span></a>
+    						    </li>
+       <li class="has-subnav">
+     		  <a role="button" ui-sref="CouponByType">
+         		   <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">My Coupons Filtered By Type
+                  	         </span></a>
+          						  </li>
+       <li class="has-subnav">
+    		  <a role="button" ui-sref="CouponByID">
+    			    <i class="fa fa-bar-chart-o fa-2x"></i>
+                         <span class="nav-text">Get Coupon By ID
+              		           </span></a>
+      					        	</li>
+      					            <li>
+                   <a role="button" ui-sref="GetCouponsByEndDate">
+                       <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">
+                           Get Coupon By End Date
+                        </span>
+                    </a>
+                </li>	
+      				<li>
+                    <a role="button" ui-sref="GetCompanyDetails">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                            My Details
+                        </span>
+                    </a>
+                </li>	    
+                 <li>
+                    <a role="button" ui-sref="Information">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Information
+                        </span>
+                    </a>
+                </li>    	
+      					        	
+      <li class="has-subnav">
+             <a ng-controller="Logout as l" ng-click="l.logoutFunc()"
+              href="http://localhost:8080/CouponSystemProjectWeb/login.html">
+                   <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">Log out
+                        </span></a>
+                            </li>
+                </ul>
+          </nav>
+     
+      
+
+</body>
+</html>

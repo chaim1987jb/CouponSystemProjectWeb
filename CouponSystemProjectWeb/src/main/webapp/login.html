@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+ <link rel="stylesheet" href="./CssFiles/login.css" type="text/css" />
+ <link rel="stylesheet" href="bootstrap.css" type="text/css" />
+ 
+<title>Coupons home</title>
+</head>
+<body class="colr">
+<h1 class="css">Welcome to Coupon Site</h1>
+<div class="media-left divv">
+<form action="http://localhost:8080/CouponSystemProjectWeb/LoginServlet" method="POST">
+<input type="radio" name="type" value="admin" checked><strong class="texstColor">Admin</strong>  <br>
+<input type="radio" name="type" value="company" ><strong class="texstColor">Company</strong> <br>
+<input type="radio" name="type" value="customer" ><strong class="texstColor">Customer</strong> 
+<br>
+<br>
+<strong class="texstColor">user name : </strong><input type="text" name="username" placeholder="please enter yuor name"
+pattern="[^'\x22]+" required="required"><br>
+<strong class="texstColor">password :</strong> <input type="password" name="password" placeholder="please enter password"
+pattern="[^'\x22]+" required="required"><br>
+<input type="submit" value="login" >
+</form>
+</div>
+<div class="media-right">
+<img class="containerimg"  src="./Images/Online Shop Window.jpg">
+</div>
+</body>
+</html>
